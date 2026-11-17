@@ -1,0 +1,40 @@
+{
+  "id": "zosyhpk64s",
+  "name": {
+    "tr": "Paketler",
+    "en": "Packages",
+    "ar": "الباقات"
+  },
+  "description": {
+    "tr": "Teslim, vinç, kesim ve metraj hizmetlerinden paket kurun.",
+    "en": "Build a package from delivery, crane, cutting and take-off services.",
+    "ar": "كوّن باقة من خدمات التوصيل والرافعة والقص وحساب الكميات."
+  },
+  "keyword": {
+    "tr": "şantiye paketi",
+    "en": "site package",
+    "ar": "باقة الموقع"
+  },
+  "path": "hizmetler",
+  "icon": "checklist",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "ez1dsa",
+      "jo2jr0"
+    ],
+    "footer": []
+  },
+  "index": 0,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Paketler",
+    "en": "Packages",
+    "ar": "الباقات"
+  },
+  "date": "2026-11-16T22:46:14.605Z",
+  "update": "2026-11-16T22:46:14.628Z"
+}

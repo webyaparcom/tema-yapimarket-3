@@ -1,0 +1,48 @@
+{
+  "name": {
+    "tr": "Şubeler",
+    "en": "Branches",
+    "ar": "الفروع"
+  },
+  "status": "play",
+  "category": "",
+  "id": "hakkimizda",
+  "url": "",
+  "path": "hakkimizda",
+  "index": 1,
+  "icon": "warehouse",
+  "desing": {
+    "header": [],
+    "body": [
+      "8otm5o",
+      "k8mp01",
+      "jo2jr0"
+    ],
+    "footer": []
+  },
+  "pathnext": "",
+  "description": {
+    "tr": "Karatay, Selçuklu ve Meram depoları, harita ve rakamlar.",
+    "en": "Karatay, Selcuklu and Meram depots, map and figures.",
+    "ar": "مستودعات قراطاي وسلجوقلو ومرام والخريطة والأرقام."
+  },
+  "spot": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "desc": {},
+  "title": {
+    "tr": "Şubeler",
+    "en": "Branches",
+    "ar": "الفروع"
+  },
+  "keyword": {
+    "tr": "hakkımızda",
+    "en": "about",
+    "ar": "من نحن"
+  },
+  "text": {},
+  "update": "2026-11-16T22:46:14.640Z",
+  "date": "2026-10-30"
+}

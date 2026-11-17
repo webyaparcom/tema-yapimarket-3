@@ -1,0 +1,54 @@
+{
+  "order": false,
+  "user": false,
+  "description": {
+    "tr": "Üçyol Yapı Depoları: Konya’da üç şubeden çimento, demir, tuğla, yalıtım ve ince iş malzemesi; vinçli indirme ve şantiyeye teslim. Size en yakın depoyu bulun. Demo site; içerik kurgusaldır.",
+    "en": "Ucyol Building Depots: cement, rebar, bricks, insulation and finishing materials from three branches in Konya, with crane unloading and site delivery. Find your nearest depot. Demo site; content is fictional.",
+    "ar": "أوتشيول لمستودعات البناء: إسمنت وحديد وطوب وعزل ومواد تشطيب من ثلاثة فروع في قونية، مع التفريغ بالرافعة والتوصيل إلى الموقع. اعثر على أقرب مستودع. موقع تجريبي؛ المحتوى افتراضي."
+  },
+  "keyword": {
+    "tr": "yapı deposu, çimento, inşaat demiri, tuğla, şantiye teslimi, Konya",
+    "en": "building depot, cement, rebar, bricks, site delivery, Konya",
+    "ar": "مستودع مواد بناء، إسمنت، حديد تسليح، طوب، توصيل للموقع، قونية"
+  },
+  "category": "Kurumsal",
+  "name": "Üçyol Yapı",
+  "domain": "yapimarket-3.webyapar.com",
+  "langs": {
+    "tr": true,
+    "en": true,
+    "ar": true,
+    "de": false,
+    "ru": false,
+    "es": false,
+    "fr": false,
+    "it": false,
+    "ja": false,
+    "zh": false,
+    "ko": false,
+    "pt": false
+  },
+  "logo": "logo.png",
+  "multi": false,
+  "publishMode": "static",
+  "font": {
+    "body": "nunito-sans",
+    "heading": "rubik",
+    "ar": {
+      "body": "ibm-plex-sans-arabic",
+      "heading": "noto-kufi-arabic"
+    }
+  },
+  "colorScheme": "auto",
+  "theme_color": "#E3B505",
+  "seo": {
+    "noindex": true
+  },
+  "cssTokens": {
+    "--mx-radius-sm": "4px",
+    "--mx-radius-md": "6px",
+    "--mx-radius-lg": "8px",
+    "--mx-radius-xl": "11px"
+  },
+  "icon": "icon.png"
+}
