@@ -1,0 +1,177 @@
+<section class="modulex-galeri-genis-detay{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-galeri-genis-detay-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* galeri-genis-detay — galeri-buyut ve galeri-album-kutu görseli sayfanın üstünde (perde/dialog) açar, galeri-slayt sabit bir sahne kullanır. Bu modül akışı bozmadan ızgaranın İÇİNDE, tıklanan satırın sonuna yerleşen paneli açar (DOM'da taşınan tam genişlik satır + konum oku); kataloğa bakarken bağlamı kaybettirmeyen ürün/mekân incelemesi. */
+  .modulex-galeri-genis-detay { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-galeri-genis-detay *, .modulex-galeri-genis-detay *::before, .modulex-galeri-genis-detay *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-galeri-genis-detay :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-galeri-genis-detay :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-galeri-genis-detay :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-galeri-genis-detay :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-galeri-genis-detay img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-galeri-genis-detay) img { height: auto; }
+  .modulex-galeri-genis-detay [hidden] { display: none !important; }
+  .modulex-galeri-genis-detay :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-galeri-genis-detay :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-galeri-genis-detay-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-galeri-genis-detay-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-galeri-genis-detay--bassiz .modulex-galeri-genis-detay-bas { display: none; }
+  .modulex-galeri-genis-detay-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-galeri-genis-detay-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-galeri-genis-detay-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-galeri-genis-detay-bas { max-width: 780px; margin-inline: auto; text-align: center; justify-items: center; }
+  .modulex-galeri-genis-detay-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-galeri-genis-detay-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-galeri-genis-detay-dugme:hover { transform: translateY(-2px); }
+  .modulex-galeri-genis-detay-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-galeri-genis-detay-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-galeri-genis-detay-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-galeri-genis-detay-alan { container-type: inline-size; }
+  .modulex-galeri-genis-detay-liste { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px 16px; }
+  .modulex-galeri-genis-detay-oge { --th: calc((100cqi - 48px) / 4 * 0.75); display: grid; align-content: start; gap: 10px; min-width: 0; }
+  @media (min-width: 1025px) {
+    .modulex-galeri-genis-detay-oge:nth-child(4n+3 of .modulex-galeri-genis-detay-oge):nth-last-child(1 of .modulex-galeri-genis-detay-oge), .modulex-galeri-genis-detay-oge:nth-child(4n+1 of .modulex-galeri-genis-detay-oge):nth-last-child(2 of .modulex-galeri-genis-detay-oge), .modulex-galeri-genis-detay-oge:nth-child(4n+2 of .modulex-galeri-genis-detay-oge):nth-last-child(1 of .modulex-galeri-genis-detay-oge) { grid-column: span 2; }
+    .modulex-galeri-genis-detay-oge:nth-child(4n+1 of .modulex-galeri-genis-detay-oge):nth-last-child(1 of .modulex-galeri-genis-detay-oge) { grid-column: 1 / -1; }
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .modulex-galeri-genis-detay-oge:nth-child(3n+2 of .modulex-galeri-genis-detay-oge):nth-last-child(1 of .modulex-galeri-genis-detay-oge) { grid-column: span 2; }
+    .modulex-galeri-genis-detay-oge:nth-child(3n+1 of .modulex-galeri-genis-detay-oge):nth-last-child(1 of .modulex-galeri-genis-detay-oge) { grid-column: 1 / -1; }
+  }
+  .modulex-galeri-genis-detay-onizle { position: relative; display: block; overflow: hidden; border-radius: calc(--yuvarlak-- * 0.7); background: --kartBg--; transition: box-shadow 0.3s ease, transform 0.3s ease; }
+  .modulex-galeri-genis-detay-onizle .modulex-galeri-genis-detay-g { width: 100%; height: var(--th); aspect-ratio: auto; object-fit: cover; transition: transform 0.5s ease, filter 0.4s ease; }
+  .modulex-galeri-genis-detay-onizle:hover .modulex-galeri-genis-detay-g { transform: scale(1.05); }
+  .modulex-galeri-genis-detay-onizle[aria-expanded="true"] { box-shadow: 0 0 0 3px --bg--, 0 0 0 6px --accent--; transform: translateY(-3px); }
+  .modulex-galeri-genis-detay-yazi { display: grid; gap: 2px; }
+  .modulex-galeri-genis-detay--gjs .modulex-galeri-genis-detay-yazi .modulex-galeri-genis-detay-kmetin { display: none; }
+  .modulex-galeri-genis-detay-detay { position: relative; grid-column: 1 / -1; padding: clamp(18px, 3vw, 34px); border-radius: --yuvarlak--; background: --text--; color: --bg--; }
+  .modulex-galeri-genis-detay-detay::before { content: ""; position: absolute; inset-block-start: -9px; inset-inline-start: calc(var(--x, 50%) - 10px); width: 20px; height: 20px; border-radius: 3px; background: --text--; transform: rotate(45deg); transition: inset-inline-start 0.35s ease; }
+  .modulex-galeri-genis-detay-dic { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); align-items: center; gap: clamp(18px, 3.5vw, 48px); animation: modulex-galeri-genis-detay-ac 0.45s ease both; }
+  .modulex-galeri-genis-detay-dgorsel { overflow: hidden; border-radius: calc(--yuvarlak-- * 0.6); background: color-mix(in srgb, --bg-- 10%, transparent); }
+  .modulex-galeri-genis-detay-dimg { width: 100%; aspect-ratio: 16 / 10; height: auto; object-fit: cover; }
+  .modulex-galeri-genis-detay-dbilgi { display: grid; align-content: center; gap: 12px; padding-inline-end: 34px; }
+  .modulex-galeri-genis-detay-dkat { color: color-mix(in srgb, --bg-- 80%, --text--); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+  .modulex-galeri-genis-detay-dbas { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.4rem, 2.6vw, 2.1rem); font-weight: 750; line-height: 1.15; }
+  .modulex-galeri-genis-detay-dmet { color: color-mix(in srgb, --bg-- 86%, --text--); font-size: 1rem; line-height: 1.65; }
+  .modulex-galeri-genis-detay-darac { display: flex; gap: 10px; margin-block-start: 6px; }
+  .modulex-galeri-genis-detay-darac .modulex-galeri-genis-detay-ok { border-color: color-mix(in srgb, --bg-- 30%, transparent); background: transparent; color: --bg--; }
+  .modulex-galeri-genis-detay-darac .modulex-galeri-genis-detay-ok:hover { background: --bg--; color: --text--; }
+  .modulex-galeri-genis-detay-dkapat { position: absolute; inset-block-start: 12px; inset-inline-end: 12px; display: inline-grid; place-items: center; width: 42px; height: 42px; padding: 0; border: 0; border-radius: 50%; background: color-mix(in srgb, --bg-- 14%, transparent); color: --bg--; transition: background 0.25s ease, transform 0.25s ease; }
+  .modulex-galeri-genis-detay-dkapat:hover { background: --accent--; color: --accentText--; transform: rotate(90deg); }
+  @keyframes modulex-galeri-genis-detay-ac { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+  @media (max-width: 1024px) {
+    .modulex-galeri-genis-detay-liste { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .modulex-galeri-genis-detay-oge { --th: calc((100cqi - 32px) / 3 * 0.75); }
+  }
+  @media (max-width: 768px) {
+    .modulex-galeri-genis-detay-liste { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 12px; }
+    .modulex-galeri-genis-detay-oge { --th: calc((100cqi - 12px) / 2 * 0.75); }
+    .modulex-galeri-genis-detay-oge:nth-child(2n+1 of .modulex-galeri-genis-detay-oge):nth-last-child(1 of .modulex-galeri-genis-detay-oge) { grid-column: 1 / -1; }
+    .modulex-galeri-genis-detay-detay { padding-block-start: 62px; }
+    .modulex-galeri-genis-detay-dic { grid-template-columns: minmax(0, 1fr); }
+    .modulex-galeri-genis-detay-dbilgi { padding-inline-end: 0; }
+    .modulex-galeri-genis-detay-dimg { aspect-ratio: 4 / 3; }
+    .modulex-galeri-genis-detay-kbaslik { font-size: 0.92rem; }
+  }
+  .modulex-galeri-genis-detay-yer { display: grid; place-items: center; width: 100%; aspect-ratio: 4 / 3; background: color-mix(in srgb, --accent-- 14%, --kartBg--); color: --accentInk--; }
+  .modulex-galeri-genis-detay-yer .material-symbols-outlined { font-size: 40px; }
+  .modulex-galeri-genis-detay-bag { color: inherit; text-decoration: none; }
+  .modulex-galeri-genis-detay-bag:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-galeri-genis-detay-kbaslik { font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
+  .modulex-galeri-genis-detay-kmetin { color: --muted--; font-size: 0.95rem; line-height: 1.6; }
+  .modulex-galeri-genis-detay-kat { color: --accentInk--; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+  .modulex-galeri-genis-detay-kontrol { display: flex; gap: 10px; justify-content: flex-end; margin-block-start: 18px; }
+  .modulex-galeri-genis-detay-ok { display: inline-grid; place-items: center; width: 48px; height: 48px; border: 1px solid --cizgi--; border-radius: 50%; background: --kartBg--; color: --text--; transition: background 0.25s ease, color 0.25s ease, opacity 0.25s ease; }
+  .modulex-galeri-genis-detay-ok:hover:not(:disabled) { background: --accent--; color: --accentText--; }
+  .modulex-galeri-genis-detay-ok:disabled { opacity: 0.4; cursor: default; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-galeri-genis-detay :is(.modulex-galeri-genis-detay-baslik, .modulex-galeri-genis-detay-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-galeri-genis-detay-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-galeri-genis-detay { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-galeri-genis-detay *, .modulex-galeri-genis-detay *::before, .modulex-galeri-genis-detay *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-galeri-genis-detay";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const genislet = (s, P) => {
+        const L = s.querySelector("[data-gd-liste]");
+        const pan = s.querySelector("[data-gd-panel]");
+        const T = [...s.querySelectorAll("a[data-gd]")];
+        if (!L || !pan || !T.length) return;
+        s.classList.add(P + "--gjs");
+        const kutu = pan.querySelector("[data-gd-gorsel]");
+        const img = document.createElement("img");
+        img.className = P + "-dimg";
+        img.alt = "";
+        img.decoding = "async";
+        if (kutu) kutu.append(img);
+        const yaz = (q, v) => { const e = pan.querySelector(q); if (e) { e.textContent = v || ""; e.hidden = !v; } };
+        const G = [...pan.querySelectorAll("[data-gd-git]")];
+        G.forEach((b) => { b.hidden = T.length < 2; });
+        let n = -1;
+        const yerles = () => {
+          if (n < 0) return;
+          const li = T[n].closest("li");
+          pan.hidden = true;
+          let son = li;
+          [...L.children].forEach((x) => { if (x !== pan && Math.abs(x.offsetTop - li.offsetTop) < 2) son = x; });
+          son.after(pan);
+          pan.hidden = false;
+          const r = li.getBoundingClientRect();
+          const q = L.getBoundingClientRect();
+          const rtl = getComputedStyle(L).direction === "rtl";
+          pan.style.setProperty("--x", Math.round(rtl ? q.right - r.right + r.width / 2 : r.left - q.left + r.width / 2) + "px");
+        };
+        const ac = (i) => {
+          n = (i + T.length) % T.length;
+          const a = T[n];
+          T.forEach((x, j) => x.setAttribute("aria-expanded", String(j === n)));
+          img.src = a.getAttribute("href");
+          img.alt = a.dataset.alt || "";
+          yaz("[data-gd-kat]", a.dataset.kat);
+          yaz("[data-gd-bas]", a.dataset.baslik);
+          yaz("[data-gd-met]", a.dataset.metin);
+          yerles();
+        };
+        const kapat = (odak) => {
+          if (n < 0) return;
+          const a = T[n];
+          a.setAttribute("aria-expanded", "false");
+          pan.hidden = true;
+          n = -1;
+          if (odak) a.focus();
+        };
+        T.forEach((a, i) => a.addEventListener("click", (e) => {
+          if (e.ctrlKey || e.metaKey || e.shiftKey || e.button > 0) return;
+          e.preventDefault();
+          if (n === i) kapat(false);
+          else ac(i);
+        }));
+        G.forEach((b) => b.addEventListener("click", () => ac(n + Number(b.dataset.gdGit))));
+        const k = pan.querySelector("[data-gd-kapat]");
+        if (k) k.addEventListener("click", () => kapat(true));
+        s.addEventListener("keydown", (e) => { if (e.key === "Escape" && n > -1) { e.preventDefault(); kapat(true); } });
+        let bekle = 0;
+        window.addEventListener("resize", () => { clearTimeout(bekle); bekle = setTimeout(yerles, 120); });
+        ac(0);
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      genislet(s, P, az);
+    });
+  })();
+</script>

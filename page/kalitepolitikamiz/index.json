@@ -1,0 +1,46 @@
+{
+  "id": "kalitepolitikamiz",
+  "name": {
+    "tr": "Kalite Politikamız",
+    "en": "Quality Policy",
+    "ar": "سياسة الجودة"
+  },
+  "description": {
+    "tr": "Kalite politikamız",
+    "en": "Our quality policy",
+    "ar": "سياسة الجودة لدينا"
+  },
+  "keyword": {
+    "tr": "Kalite Politikamız",
+    "en": "quality policy, quality, continuous improvement",
+    "ar": "سياسة الجودة, الجودة, التحسين المستمر"
+  },
+  "path": "kalitepolitikamiz",
+  "icon": "verified",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [],
+    "footer": []
+  },
+  "index": 2,
+  "url": "",
+  "text": {
+    "tr": "<h2>Kalite Politikamız</h2>\n<p>Metraj kontrolü, irsaliyede açık fiyat ve vinçli indirmede saha güvenliği.</p>",
+    "en": "<h2>Our quality policy</h2>\n<p>Quantity checks, clear prices on the delivery note and site safety during crane unloading.</p>",
+    "ar": "<h2>سياسة الجودة لدينا</h2>\n<p>التحقق من الكميات وأسعار واضحة في إشعار التسليم وسلامة الموقع أثناء التفريغ بالرافعة.</p>"
+  },
+  "title": {
+    "tr": "Kalite Politikamız",
+    "en": "Quality Policy",
+    "ar": "سياسة الجودة"
+  },
+  "date": "2026-11-16T22:46:14.202Z",
+  "update": "2026-11-16T22:46:14.727Z",
+  "sablonIzi": "acedf6b7c400faec",
+  "sablonIziDil": {
+    "en": "587042c99dce90ca",
+    "ar": "a5348f544603b25e"
+  }
+}

@@ -1,0 +1,140 @@
+<section class="modulex-hizmet-paket-sec{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-hizmet-paket-sec-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* hizmet-paket-sec — hizmet-bolum-suz çiplerle süzer, hizmet-sure-karsilastir tek hizmetin modunu değiştirir; bu modülde ziyaretçi birden çok hizmeti işaretleyerek kendi paketini kurar — çoklu seçim, canlı toplam ve teklif bağlantısına aktarım; ailede sepet/özet panosu yok. */
+  .modulex-hizmet-paket-sec { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-hizmet-paket-sec *, .modulex-hizmet-paket-sec *::before, .modulex-hizmet-paket-sec *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-hizmet-paket-sec :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-hizmet-paket-sec :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-hizmet-paket-sec :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-hizmet-paket-sec :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-hizmet-paket-sec img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-hizmet-paket-sec) img { height: auto; }
+  .modulex-hizmet-paket-sec [hidden] { display: none !important; }
+  .modulex-hizmet-paket-sec :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-hizmet-paket-sec :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-hizmet-paket-sec-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-hizmet-paket-sec-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-hizmet-paket-sec--bassiz .modulex-hizmet-paket-sec-bas { display: none; }
+  .modulex-hizmet-paket-sec-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-hizmet-paket-sec-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-hizmet-paket-sec-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-hizmet-paket-sec-bas { max-width: 760px; }
+  .modulex-hizmet-paket-sec-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-hizmet-paket-sec-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-hizmet-paket-sec-dugme:hover { transform: translateY(-2px); }
+  .modulex-hizmet-paket-sec-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-hizmet-paket-sec-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-hizmet-paket-sec-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-hizmet-paket-sec-paket { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(260px, 1fr); gap: clamp(22px, 4vw, 48px); align-items: start; }
+  .modulex-hizmet-paket-sec:not(.modulex-hizmet-paket-sec--psjs) .modulex-hizmet-paket-sec-paket { grid-template-columns: minmax(0, 1fr); }
+  .modulex-hizmet-paket-sec:not(.modulex-hizmet-paket-sec--psjs) .modulex-hizmet-paket-sec-pano { display: none; }
+  .modulex-hizmet-paket-sec-psatirlar { display: grid; gap: 12px; }
+  .modulex-hizmet-paket-sec-psatir { position: relative; display: grid; gap: 10px; padding: 18px 20px; border: 2px solid --cizgi--; border-radius: --yuvarlak--; background-color: --bg--; transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease; }
+  .modulex-hizmet-paket-sec-psatir:has(.modulex-hizmet-paket-sec-pkutu:checked) { border-color: --accent--; background-color: color-mix(in srgb, --accent-- 7%, --bg--); box-shadow: 0 14px 28px -24px color-mix(in srgb, --text-- 70%, transparent); }
+  .modulex-hizmet-paket-sec-pkutu { position: absolute; width: 1px; height: 1px; margin: 0; opacity: 0; }
+  .modulex-hizmet-paket-sec-petk { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; cursor: pointer; }
+  .modulex-hizmet-paket-sec-ptik { display: grid; flex: none; place-items: center; width: 30px; height: 30px; border: 2px solid --accent--; border-radius: 8px; color: transparent; transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease; }
+  .modulex-hizmet-paket-sec-ptik .material-symbols-outlined { font-size: 20px; }
+  .modulex-hizmet-paket-sec-pkutu:checked + .modulex-hizmet-paket-sec-petk .modulex-hizmet-paket-sec-ptik { background-color: --accent--; color: --accentText--; transform: scale(1.08); }
+  .modulex-hizmet-paket-sec-pkutu:focus-visible + .modulex-hizmet-paket-sec-petk .modulex-hizmet-paket-sec-ptik { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-hizmet-paket-sec-pikon { color: --accentInk--; font-size: 26px; }
+  .modulex-hizmet-paket-sec-pad { flex: 1 1 160px; font-size: 1.12rem; font-weight: 750; }
+  .modulex-hizmet-paket-sec-pfiyat { margin-inline-start: auto; padding: 4px 12px; border-radius: 999px; background: --kartBg--; color: --accentInk--; font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .modulex-hizmet-paket-sec-pgovde { display: grid; gap: 8px; padding-inline-start: 44px; }
+  .modulex-hizmet-paket-sec-pgovde .modulex-hizmet-paket-sec-kmetin { color: --muted--; font-size: 0.94rem; }
+  .modulex-hizmet-paket-sec-pano { position: sticky; inset-block-start: 96px; display: grid; gap: 14px; padding: 24px; border-radius: --yuvarlak--; background: --vurguBg--; color: --vurguText--; }
+  .modulex-hizmet-paket-sec-pbaslik { display: flex; align-items: center; gap: 10px; font-size: 1.05rem; font-weight: 800; }
+  .modulex-hizmet-paket-sec-psayi { display: grid; place-items: center; min-width: 30px; height: 30px; margin-inline-start: auto; padding-inline: 8px; border-radius: 999px; background: --vurguText--; color: --vurguBg--; font-size: 0.9rem; font-variant-numeric: tabular-nums; transition: transform 0.3s ease; }
+  .modulex-hizmet-paket-sec--secili .modulex-hizmet-paket-sec-psayi { transform: scale(1.12); }
+  .modulex-hizmet-paket-sec-pbos { font-size: 0.93rem; }
+  .modulex-hizmet-paket-sec-pliste { display: grid; gap: 6px; }
+  .modulex-hizmet-paket-sec-pliste li { padding-block-end: 6px; border-block-end: 1px dashed color-mix(in srgb, --vurguText-- 35%, transparent); font-weight: 650; animation: modulex-hizmet-paket-sec-pgel 0.3s ease both; }
+  .modulex-hizmet-paket-sec-ptoplam { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding-block-start: 4px; font-weight: 700; }
+  .modulex-hizmet-paket-sec-ptoplam strong { font-size: 1.5rem; font-weight: 850; font-variant-numeric: tabular-nums; }
+  .modulex-hizmet-paket-sec-pano .modulex-hizmet-paket-sec-pteklif { justify-content: center; border-color: --vurguText--; background: --vurguText--; color: --vurguBg--; }
+  .modulex-hizmet-paket-sec-pano :focus-visible { outline-color: --vurguText--; }
+  @keyframes modulex-hizmet-paket-sec-pgel { from { transform: translateX(-8px); } to { transform: none; } }
+  @media (max-width: 1024px) {
+    .modulex-hizmet-paket-sec-paket { grid-template-columns: minmax(0, 1fr); }
+    .modulex-hizmet-paket-sec-pano { position: static; }
+  }
+  @media (max-width: 768px) {
+    .modulex-hizmet-paket-sec-psatir { padding: 16px; }
+    .modulex-hizmet-paket-sec-pgovde { padding-inline-start: 0; }
+    .modulex-hizmet-paket-sec-pfiyat { margin-inline-start: 0; }
+  }
+  .modulex-hizmet-paket-sec-git { position: relative; display: inline-flex; align-items: center; gap: 6px; width: fit-content; color: --accentInk--; font-weight: 700; text-decoration: none; transition: gap 0.25s ease; }
+  .modulex-hizmet-paket-sec-git:hover { gap: 10px; }
+  .modulex-hizmet-paket-sec-git .material-symbols-outlined { font-size: 18px; }
+  .modulex-hizmet-paket-sec-maddeler { display: grid; gap: 6px; }
+  .modulex-hizmet-paket-sec-maddeler li { display: flex; align-items: flex-start; gap: 8px; font-size: 0.93rem; }
+  .modulex-hizmet-paket-sec-maddeler .material-symbols-outlined { flex: none; margin-block-start: 1px; color: --accentInk--; font-size: 18px; }
+  .modulex-hizmet-paket-sec-fiyat { color: --accentInk--; font-weight: 800; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-hizmet-paket-sec :is(.modulex-hizmet-paket-sec-baslik, .modulex-hizmet-paket-sec-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-hizmet-paket-sec-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-hizmet-paket-sec { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-hizmet-paket-sec *, .modulex-hizmet-paket-sec *::before, .modulex-hizmet-paket-sec *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-hizmet-paket-sec";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const paketSec = (s, P) => {
+        const kutu = [...s.querySelectorAll("input[data-ps]")];
+        const pano = s.querySelector("[data-ps-pano]");
+        if (!kutu.length || !pano) return;
+        s.classList.add(P + "--psjs");
+        const liste = pano.querySelector("[data-ps-liste]");
+        const bos = pano.querySelector("[data-ps-bos]");
+        const sayi = pano.querySelector("[data-ps-sayi]");
+        const tk = pano.querySelector("[data-ps-toplam-kap]");
+        const top = pano.querySelector("[data-ps-toplam]");
+        const bag = pano.querySelector("[data-ps-bag]");
+        const taban = bag ? bag.getAttribute("href") || "" : "";
+        const dl = document.documentElement.lang || undefined;
+        let pf = null;
+        let nf = null;
+        try { pf = new Intl.NumberFormat(dl, pano.dataset.psPara ? { style: "currency", currency: pano.dataset.psPara, maximumFractionDigits: 0 } : { maximumFractionDigits: 0 }); } catch (x) { pf = null; }
+        try { nf = new Intl.NumberFormat(dl); } catch (x) { nf = null; }
+        const guncelle = () => {
+          const sec = kutu.filter((k) => k.checked);
+          if (liste) liste.replaceChildren(...sec.map((k) => { const li = document.createElement("li"); li.textContent = k.dataset.ps; return li; }));
+          if (bos) bos.hidden = sec.length > 0;
+          if (sayi) sayi.textContent = nf ? nf.format(sec.length) : String(sec.length);
+          const tamam = sec.length > 0 && sec.every((k) => Number(k.dataset.psTutar) > 0);
+          if (tk) tk.hidden = !tamam;
+          if (top && tamam) { const t = sec.reduce((a, k) => a + Number(k.dataset.psTutar), 0); top.textContent = pf ? pf.format(t) : String(t); }
+          s.classList.toggle(P + "--secili", sec.length > 0);
+          if (!bag || !taban) return;
+          let u;
+          try { u = new URL(taban, location.href); } catch (x) { return; }
+          if (/(^|\.)(wa\.me|whatsapp\.com)$/i.test(u.hostname)) u.searchParams.set("text", [bag.dataset.psOnek || ""].concat(sec.map((k) => "• " + k.dataset.ps)).filter(Boolean).join("\n"));
+          else if (sec.length) u.searchParams.set("hizmet", sec.map((k) => k.dataset.ps).join(", "));
+          else u.searchParams.delete("hizmet");
+          bag.setAttribute("href", u.href.replace(/\?[^#]*/, (q) => q.replace(/\+/g, "%20")));
+        };
+        kutu.forEach((k) => k.addEventListener("change", guncelle));
+        guncelle();
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      paketSec(s, P, az);
+    });
+  })();
+</script>

@@ -1,0 +1,60 @@
+{
+  "name": "Hizmet Paket Seç — onay kutulu hizmetler + yapışkan teklif özeti",
+  "description": "Solda onay kutulu hizmet satırları (ikon, ad, açıklama, fiyat yazısı, kapsam maddeleri, bağlantı); sağda yapışkan özet panosu: seçilen hizmetlerin listesi, adet, sayısal tutar (data[].tutar) tümünde varsa sayfa diliyle para biçiminde toplam ve seçilenleri taşıyan teklif düğmesi (WhatsApp mesajı ya da ?hizmet=). JS yokken pano gizli, liste tek sütun. hizmet-bolum-suz çiplerle süzer, hizmet-sure-karsilastir tek hizmetin modunu değiştirir; bu modülde ziyaretçi birden çok hizmeti işaretleyerek kendi paketini kurar — çoklu seçim, canlı toplam ve teklif bağlantısına aktarım; ailede sepet/özet panosu yok. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Veri yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "playlist_add_check",
+  "category": "hizmet",
+  "subCategory": "package-builder",
+  "tags": [
+    "hizmet",
+    "checkbox",
+    "package",
+    "summary",
+    "quote",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "bg": "var(--mx-site-surface, #f6f7f9)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 70%, var(--mx-site-surface, #f6f7f9))",
+    "kartBg": "var(--mx-site-bg, #ffffff)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "secilenEtiket": "",
+    "bosMetin": "",
+    "teklifAd": "",
+    "teklifUrl": "",
+    "teklifOnek": "",
+    "paraBirimi": "TRY",
+    "bgcolor": "var(--mx-site-surface, #f6f7f9)",
+    "color": "var(--mx-site-text, #111318)"
+  },
+  "data": [],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "data",
+    "alanlar": {
+      "baslik": "hizmet adı — dil sözlüğü (zorunlu; eski `ad`)",
+      "metin": "kısa açıklama — dil sözlüğü (eski `ozet`)",
+      "maddeler": "kapsam maddeleri — dil sözlüğü dizisi",
+      "ikon": "Material Symbols adı",
+      "img": "görsel yolu",
+      "alt": "görsel alt metni — dil sözlüğü",
+      "fiyat": "fiyat / «…'den başlayan» — dil sözlüğü ya da düz metin",
+      "url": "detay sayfası bağlantısı",
+      "linkMetin": "bağlantı yazısı (yoksa desing `linkMetin` / eski `ctaLabel`, o da yoksa «Devamını oku»)"
+    }
+  }
+}

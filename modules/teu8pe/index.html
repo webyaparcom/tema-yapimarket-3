@@ -1,0 +1,155 @@
+<header class="modulex-ust-yer-imi{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-ust-yer-imi-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</header>
+
+<style>
+  /* ust-yer-imi — Öğeler çubuğun içinde değil, üst kenara asılı ayraçlar (çentikli kurdele, yukarıdan aşağı uzar): klasör sekmesinin tersine kenardan sarkar — kitap, defter, kırtasiye dili. */
+  .modulex-ust-yer-imi { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-ust-yer-imi *, .modulex-ust-yer-imi *::before, .modulex-ust-yer-imi *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-ust-yer-imi :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-ust-yer-imi :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-ust-yer-imi :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-ust-yer-imi :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-ust-yer-imi img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-ust-yer-imi) img { height: auto; }
+  .modulex-ust-yer-imi [hidden] { display: none !important; }
+  .modulex-ust-yer-imi :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-ust-yer-imi :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-ust-yer-imi-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-ust-yer-imi-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-ust-yer-imi--bassiz .modulex-ust-yer-imi-bas { display: none; }
+  .modulex-ust-yer-imi-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-ust-yer-imi-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-ust-yer-imi-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-ust-yer-imi-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-ust-yer-imi-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-ust-yer-imi-dugme:hover { transform: translateY(-2px); }
+  .modulex-ust-yer-imi-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-ust-yer-imi-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-ust-yer-imi-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-ust-yer-imi { position: relative; z-index: 900; }
+  .modulex-ust-yer-imi-logo { display: inline-flex; flex: 0 1 auto; min-width: 0; align-items: center; color: inherit; text-decoration: none; }
+  /* dar ekranda geniş logo/uzun ad çubuğu taşırmasın: logo daralır (img max-width 100%), ad sarar */
+  .modulex-ust-yer-imi-logo img { width: auto; max-height: --logoH--; }
+  .modulex-ust-yer-imi-ad { font-family: var(--mx-font-heading, inherit); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+  .modulex-ust-yer-imi-oge { position: relative; display: inline-flex; align-items: center; min-height: 44px; color: inherit; font-weight: 600; text-decoration: none; transition: color 0.2s ease, background 0.2s ease; }
+  .modulex-ust-yer-imi-oge:hover, .modulex-ust-yer-imi-oge[aria-current="page"] { color: --accentInk--; }
+  .modulex-ust-yer-imi-cta { display: inline-flex; flex: none; align-items: center; gap: 6px; min-height: 44px; padding: 8px 18px; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; white-space: nowrap; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .modulex-ust-yer-imi-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -12px --accent--; }
+  .modulex-ust-yer-imi-cta .material-symbols-outlined, .modulex-ust-yer-imi-tel .material-symbols-outlined, .modulex-ust-yer-imi-posta .material-symbols-outlined { font-size: 18px; }
+  .modulex-ust-yer-imi-tel, .modulex-ust-yer-imi-posta { display: inline-flex; align-items: center; gap: 6px; color: inherit; text-decoration: none; white-space: nowrap; }
+  .modulex-ust-yer-imi-tel:hover, .modulex-ust-yer-imi-posta:hover { color: --accentInk--; }
+  .modulex-ust-yer-imi-dil:empty { display: none; }
+  .modulex-ust-yer-imi-ac { display: none; align-items: center; gap: 10px; min-width: 46px; min-height: 46px; padding: 0 12px; border: 1px solid --cizgi--; border-radius: 999px; background: transparent; color: inherit; font: inherit; font-weight: 700; }
+  .modulex-ust-yer-imi-ac-ikon { display: grid; gap: 4px; width: 20px; }
+  .modulex-ust-yer-imi-ac-ikon span { display: block; height: 2px; border-radius: 2px; background: currentColor; transition: transform 0.3s ease, opacity 0.3s ease; }
+  .modulex-ust-yer-imi--acik .modulex-ust-yer-imi-ac-ikon span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .modulex-ust-yer-imi--acik .modulex-ust-yer-imi-ac-ikon span:nth-child(2) { opacity: 0; }
+  .modulex-ust-yer-imi--acik .modulex-ust-yer-imi-ac-ikon span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+  .modulex-ust-yer-imi-kapat { display: inline-grid; place-items: center; width: 46px; height: 46px; border: 1px solid --cizgi--; border-radius: 50%; background: transparent; color: inherit; }
+  .modulex-ust-yer-imi-perde { position: fixed; inset: 0; z-index: 1; background: color-mix(in srgb, --text-- 45%, transparent); animation: modulex-ust-yer-imi-sol 0.3s ease both; }
+  @keyframes modulex-ust-yer-imi-sol { from { opacity: 0; } to { opacity: 1; } }
+
+  .modulex-ust-yer-imi-panel { display: grid; gap: 14px; }
+  @media (max-width: 1024px) {
+    .modulex-ust-yer-imi--js .modulex-ust-yer-imi-nav, .modulex-ust-yer-imi--js .modulex-ust-yer-imi-genis { display: none; }
+    .modulex-ust-yer-imi--js .modulex-ust-yer-imi-ac { display: inline-flex; }
+    .modulex-ust-yer-imi-panel { position: absolute; inset-inline: 0; inset-block-start: 100%; padding: 16px 20px 24px; border-block-end: 1px solid --cizgi--; background: --bg--; box-shadow: 0 24px 40px -28px color-mix(in srgb, --text-- 55%, transparent); animation: modulex-ust-yer-imi-in 0.3s ease both; }
+    .modulex-ust-yer-imi-pliste { display: grid; }
+    .modulex-ust-yer-imi-pliste .modulex-ust-yer-imi-oge { width: 100%; min-height: 50px; border-block-end: 1px solid --cizgi--; font-size: 1.05rem; }
+    .modulex-ust-yer-imi-palt { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+  }
+  @media (min-width: 1025px) {
+    .modulex-ust-yer-imi-panel { display: none !important; }
+  }
+  @keyframes modulex-ust-yer-imi-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+
+  .modulex-ust-yer-imi-ip { display: flex; align-items: flex-start; gap: 14px 22px; min-height: 86px; }
+  .modulex-ust-yer-imi-ip > .modulex-ust-yer-imi-logo { align-self: center; margin-inline-end: auto; }
+  .modulex-ust-yer-imi-ip > .modulex-ust-yer-imi-ac { align-self: center; }
+  .modulex-ust-yer-imi-kurdeleler { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0 6px; }
+  .modulex-ust-yer-imi-kurdele { display: flex; align-items: flex-end; min-height: 60px; padding: 16px 14px 20px; background-color: color-mix(in srgb, --text-- 7%, --bg--); color: inherit; font-size: 0.92rem; font-weight: 700; line-height: 1.2; text-decoration: none; clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 9px), 0 100%); transition: min-height 0.35s cubic-bezier(0.2, 0.8, 0.2, 1.3), background-color 0.25s ease, color 0.25s ease; }
+  .modulex-ust-yer-imi-kurdeleler > li:nth-child(3n + 2) .modulex-ust-yer-imi-kurdele { background-color: color-mix(in srgb, --text-- 12%, --bg--); }
+  .modulex-ust-yer-imi-kurdeleler > li .modulex-ust-yer-imi-kurdele:hover { min-height: 72px; background-color: color-mix(in srgb, --accent-- 22%, --bg--); }
+  .modulex-ust-yer-imi-kurdeleler > li .modulex-ust-yer-imi-kurdele[aria-current="page"] { min-height: 80px; background-color: --accent--; color: --accentText--; }
+  .modulex-ust-yer-imi-genis { display: flex; align-self: center; align-items: center; gap: 14px; }
+  .modulex-ust-yer-imi-genis .modulex-ust-yer-imi-tel { font-weight: 700; }
+  .modulex-ust-yer-imi-pliste .modulex-ust-yer-imi-oge::before { content: ""; flex: none; width: 10px; height: 18px; margin-inline-end: 14px; background-color: color-mix(in srgb, --text-- 18%, --bg--); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 72%, 0 100%); transition: background-color 0.2s ease; }
+  .modulex-ust-yer-imi-pliste .modulex-ust-yer-imi-oge:hover::before, .modulex-ust-yer-imi-pliste .modulex-ust-yer-imi-oge[aria-current="page"]::before { background-color: --accent--; }
+  @media (max-width: 1024px) {
+    .modulex-ust-yer-imi-ip { align-items: center; min-height: 64px; padding-block: 10px; }
+    .modulex-ust-yer-imi:not(.modulex-ust-yer-imi--js) .modulex-ust-yer-imi-ip { flex-wrap: wrap; }
+  }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-ust-yer-imi :is(.modulex-ust-yer-imi-baslik, .modulex-ust-yer-imi-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-ust-yer-imi-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-ust-yer-imi { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-ust-yer-imi *, .modulex-ust-yer-imi *::before, .modulex-ust-yer-imi *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-ust-yer-imi";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const cekmece = (s, P) => {
+          const ac = s.querySelector("." + P + "-ac");
+          const panel = ac ? document.getElementById(ac.getAttribute("aria-controls")) : null;
+          if (!ac || !panel) return;
+          s.classList.add(P + "--js");
+          const perde = s.querySelector("." + P + "-perde");
+          const modal = panel.getAttribute("aria-modal") === "true";
+          const kok = document.documentElement;
+          const kapa = (odak) => {
+            if (panel.hidden) return;
+            panel.hidden = true;
+            if (perde) perde.hidden = true;
+            ac.setAttribute("aria-expanded", "false");
+            s.classList.remove(P + "--acik");
+            if (modal) kok.style.overflow = "";
+            if (odak) ac.focus();
+          };
+          const aci = () => {
+            panel.hidden = false;
+            if (perde) perde.hidden = false;
+            ac.setAttribute("aria-expanded", "true");
+            s.classList.add(P + "--acik");
+            if (modal) kok.style.overflow = "hidden";
+            const ilk = panel.querySelector("a[href], button");
+            if (ilk) ilk.focus();
+          };
+          ac.addEventListener("click", () => (panel.hidden ? aci() : kapa(true)));
+          panel.addEventListener("click", (e) => {
+            if (e.target.closest("." + P + "-kapat")) kapa(true);
+            else if (e.target.closest("a[href]")) kapa(false);
+          });
+          if (perde) perde.addEventListener("click", () => kapa(true));
+          document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !panel.hidden) kapa(true); });
+          if (modal) {
+            panel.addEventListener("keydown", (e) => {
+              if (e.key !== "Tab") return;
+              const o = [...panel.querySelectorAll("a[href], button:not([disabled])")].filter((x) => x.offsetParent !== null);
+              if (!o.length) return;
+              if (e.shiftKey && document.activeElement === o[0]) { e.preventDefault(); o[o.length - 1].focus(); }
+              else if (!e.shiftKey && document.activeElement === o[o.length - 1]) { e.preventDefault(); o[0].focus(); }
+            });
+          }
+          const g = Number(ac.dataset.genis);
+          if (g && window.matchMedia) window.matchMedia(`(min-width: ${g}px)`).addEventListener("change", (m) => { if (m.matches) kapa(false); });
+        };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      cekmece(s, P, az);
+    });
+  })();
+</script>

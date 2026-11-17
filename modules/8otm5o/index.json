@@ -1,0 +1,56 @@
+{
+  "name": "Galeri Genişleyen Ayrıntı — satırın altında açılan tam genişlik panel",
+  "description": "Dört sütunlu küçük resim ızgarası; bir küçük resme dokununca o SATIRIN hemen altında tam genişlikte koyu ayrıntı paneli açılır (büyük görsel + kategori + ad + açıklama), paneldeki ok işareti seçili küçük resmi gösterir. Önceki/sonraki ile gezilir, Esc ya da aynı küçük resim kapatır; ilk görsel açık başlar. JS yokken her küçük resmin altında adı ve açıklaması, bağlantı görseli açar. galeri-buyut ve galeri-album-kutu görseli sayfanın üstünde (perde/dialog) açar, galeri-slayt sabit bir sahne kullanır. Bu modül akışı bozmadan ızgaranın İÇİNDE, tıklanan satırın sonuna yerleşen paneli açar (DOM'da taşınan tam genişlik satır + konum oku); kataloğa bakarken bağlamı kaybettirmeyen ürün/mekân incelemesi. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Veri yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "expand_content",
+  "category": "galeri",
+  "subCategory": "inline-expand",
+  "tags": [
+    "galeri",
+    "expand",
+    "inline-detail",
+    "catalog",
+    "grid",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "tumu": "",
+    "bg": "var(--mx-site-bg, #ffffff)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 68%, var(--mx-site-bg, #ffffff))",
+    "kartBg": "var(--mx-site-surface, #f6f7f9)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "kapatAd": "",
+    "bgcolor": "var(--mx-site-bg, #ffffff)",
+    "color": "var(--mx-site-text, #111318)"
+  },
+  "data": [],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "data",
+    "alanlar": {
+      "img": "görsel yolu (boşsa yer tutucu)",
+      "baslik": "dil sözlüğü (resim adı)",
+      "alt": "dil sözlüğü (boşsa başlık)",
+      "metin": "dil sözlüğü (kısa açıklama)",
+      "kat": "kategori kimliği (desing.cats id'si)",
+      "url": "iç/dış bağlantı",
+      "w": "görsel genişliği (px, oran için)",
+      "h": "görsel yüksekliği (px)",
+      "kucuk": "küçük görsel (varsa ızgarada bu)"
+    }
+  }
+}

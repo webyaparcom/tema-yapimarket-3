@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": "zosyhpk64s",
+      "name": {
+        "tr": "Paketler",
+        "en": "Packages",
+        "ar": "الباقات"
+      },
+      "description": {
+        "tr": "Teslim, vinç, kesim ve metraj hizmetlerinden paket kurun.",
+        "en": "Build a package from delivery, crane, cutting and take-off services.",
+        "ar": "كوّن باقة من خدمات التوصيل والرافعة والقص وحساب الكميات."
+      },
+      "path": "hizmetler",
+      "icon": "checklist",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "ez1dsa",
+          "jo2jr0"
+        ],
+        "footer": []
+      },
+      "index": 0
+    },
+    {
+      "name": {
+        "tr": "Şubeler",
+        "en": "Branches",
+        "ar": "الفروع"
+      },
+      "status": "play",
+      "id": "hakkimizda",
+      "path": "hakkimizda",
+      "category": "",
+      "url": "",
+      "index": 1,
+      "icon": "warehouse",
+      "desing": {
+        "header": [],
+        "body": [
+          "8otm5o",
+          "k8mp01",
+          "jo2jr0"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Karatay, Selçuklu ve Meram depoları, harita ve rakamlar.",
+        "en": "Karatay, Selcuklu and Meram depots, map and figures.",
+        "ar": "مستودعات قراطاي وسلجوقلو ومرام والخريطة والأرقام."
+      }
+    },
+    {
+      "name": {
+        "tr": "İletişim",
+        "en": "Contact",
+        "ar": "اتصل بنا"
+      },
+      "status": "play",
+      "id": "iletisim",
+      "path": "iletisim",
+      "category": "",
+      "url": "",
+      "index": 2,
+      "icon": "call",
+      "desing": {
+        "header": [],
+        "body": [
+          "oc26pa",
+          "k8mp01"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Proje formu, şube adresleri ve harita.",
+        "en": "Project brief, branch addresses and map.",
+        "ar": "نموذج المشروع وعناوين الفروع والخريطة."
+      }
+    }
+  ],
+  "desc": []
+}
