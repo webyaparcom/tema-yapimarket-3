@@ -3,17 +3,23 @@
   "name": {
     "tr": "Kullanıcı Hakları",
     "en": "User Rights",
-    "ar": "حقوق المستخدم"
+    "ar": "حقوق المستخدم",
+    "de": "Nutzerrechte",
+    "ru": "Права пользователей"
   },
   "description": {
     "tr": "Kullanıcı hakları",
     "en": "User rights",
-    "ar": "حقوق المستخدم"
+    "ar": "حقوق المستخدم",
+    "de": "Nutzerrechte",
+    "ru": "Права пользователей"
   },
   "keyword": {
     "tr": "Kullanıcı Hakları",
     "en": "user rights, consumer rights, data protection rights",
-    "ar": "حقوق المستخدم, حقوق المستهلك, حقوق حماية البيانات"
+    "ar": "حقوق المستخدم, حقوق المستهلك, حقوق حماية البيانات",
+    "de": "Nutzerrechte",
+    "ru": "Права пользователей"
   },
   "path": "kullanicahaklari",
   "icon": "gavel",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Kullanıcı Hakları</h2>\n<p>Kullanıcılar, kişisel verilerinin işlenip işlenmediğini öğrenme, düzeltilmesini veya silinmesini isteme ve işlemeye itiraz etme haklarına sahiptir.</p>\n<p>Bu demo sitede veri kaydedilmediği için bu hakların kullanımı gerektirecek bir işlem yoktur; gerçek sitelerde başvuru kanalı bu sayfada belirtilir.</p>\n<p><em>Bu metin demo amaçlı örnektir; hukuki danışmanlık yerine geçmez.</em></p>",
     "en": "<h2>User Rights</h2>\n<p>Users have the right to learn whether their personal data is processed, to request correction or deletion, and to object to processing.</p>\n<p>Because this demo site stores no data, no action requires exercising these rights; on live sites the application channel is stated on this page.</p>\n<p><em>This text is a sample for demonstration purposes and is not legal advice.</em></p>",
-    "ar": "<h2>حقوق المستخدم</h2>\n<p>يحق للمستخدمين معرفة ما إذا كانت بياناتهم الشخصية تُعالَج، وطلب تصحيحها أو حذفها، والاعتراض على معالجتها.</p>\n<p>ولأن هذا الموقع التجريبي لا يحفظ أي بيانات، فلا يوجد إجراء يستدعي ممارسة هذه الحقوق؛ وفي المواقع الفعلية تُذكر قناة تقديم الطلبات في هذه الصفحة.</p>\n<p><em>هذا النص مثال لأغراض العرض التجريبي ولا يُعدّ استشارة قانونية.</em></p>"
+    "ar": "<h2>حقوق المستخدم</h2>\n<p>يحق للمستخدمين معرفة ما إذا كانت بياناتهم الشخصية تُعالَج، وطلب تصحيحها أو حذفها، والاعتراض على معالجتها.</p>\n<p>ولأن هذا الموقع التجريبي لا يحفظ أي بيانات، فلا يوجد إجراء يستدعي ممارسة هذه الحقوق؛ وفي المواقع الفعلية تُذكر قناة تقديم الطلبات في هذه الصفحة.</p>\n<p><em>هذا النص مثال لأغراض العرض التجريبي ولا يُعدّ استشارة قانونية.</em></p>",
+    "de": "<h2>Nutzerrechte</h2>\n<p>Nutzer haben das Recht zu erfahren, ob ihre personenbezogenen Daten verarbeitet werden, deren Berichtigung oder Löschung zu verlangen und der Verarbeitung zu widersprechen.</p>\n<p>Da diese Demo-Seite keine Daten speichert, ist keine Ausübung dieser Rechte erforderlich; auf Live-Seiten wird der Antragskanal auf dieser Seite angegeben.</p>\n<p><em>Dieser Text ist ein Beispiel zu Demonstrationszwecken und ersetzt keine Rechtsberatung.</em></p>",
+    "ru": "<h2>Права пользователей</h2>\n<p>Пользователи имеют право узнавать, обрабатываются ли их персональные данные, требовать их исправления или удаления, а также возражать против обработки.</p>\n<p>Поскольку этот демо-сайт не хранит данные, для реализации этих прав не требуется никаких действий; на рабочих сайтах канал подачи заявок указан на этой странице.</p>\n<p><em>Этот текст является примером для демонстрации и не заменяет юридическую консультацию.</em></p>"
   },
   "title": {
     "tr": "Kullanıcı Hakları",
     "en": "User Rights",
-    "ar": "حقوق المستخدم"
+    "ar": "حقوق المستخدم",
+    "de": "Nutzerrechte",
+    "ru": "Права пользователей"
   },
   "date": "2026-11-16T22:46:14.202Z",
   "update": "2026-11-16T22:46:14.803Z",

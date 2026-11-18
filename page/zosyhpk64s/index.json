@@ -3,17 +3,23 @@
   "name": {
     "tr": "Paketler",
     "en": "Packages",
-    "ar": "الباقات"
+    "ar": "الباقات",
+    "de": "Pakete",
+    "ru": "Пакеты"
   },
   "description": {
     "tr": "Teslim, vinç, kesim ve metraj hizmetlerinden paket kurun.",
     "en": "Build a package from delivery, crane, cutting and take-off services.",
-    "ar": "كوّن باقة من خدمات التوصيل والرافعة والقص وحساب الكميات."
+    "ar": "كوّن باقة من خدمات التوصيل والرافعة والقص وحساب الكميات.",
+    "de": "Stellen Sie ein Paket aus Lieferung, Kran, Zuschnitt und Aufmaß zusammen.",
+    "ru": "Соберите пакет из услуг доставки, крана, резки и обмера."
   },
   "keyword": {
     "tr": "şantiye paketi",
     "en": "site package",
-    "ar": "باقة الموقع"
+    "ar": "باقة الموقع",
+    "de": "Baugruppenpaket",
+    "ru": "пакет для стройплощадки"
   },
   "path": "hizmetler",
   "icon": "checklist",
@@ -33,7 +39,9 @@
   "title": {
     "tr": "Paketler",
     "en": "Packages",
-    "ar": "الباقات"
+    "ar": "الباقات",
+    "de": "Pakete",
+    "ru": "Пакеты"
   },
   "date": "2026-11-16T22:46:14.605Z",
   "update": "2026-11-16T22:46:14.628Z"

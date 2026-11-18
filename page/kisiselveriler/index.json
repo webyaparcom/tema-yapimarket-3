@@ -3,17 +3,23 @@
   "name": {
     "tr": "Kişisel Veriler",
     "en": "Personal Data",
-    "ar": "البيانات الشخصية"
+    "ar": "البيانات الشخصية",
+    "de": "Personenbezogene Daten",
+    "ru": "Персональные данные"
   },
   "description": {
     "tr": "Kişisel verilerin korunması",
     "en": "Protection of personal data",
-    "ar": "حماية البيانات الشخصية"
+    "ar": "حماية البيانات الشخصية",
+    "de": "Schutz personenbezogener Daten",
+    "ru": "Защита персональных данных"
   },
   "keyword": {
     "tr": "Kişisel Veriler",
     "en": "personal data, privacy notice, KVKK, Law No. 6698",
-    "ar": "البيانات الشخصية, إشعار الخصوصية, KVKK, القانون رقم 6698"
+    "ar": "البيانات الشخصية, إشعار الخصوصية, KVKK, القانون رقم 6698",
+    "de": "Personenbezogene Daten",
+    "ru": "Персональные данные"
   },
   "path": "kisiselveriler",
   "icon": "shield",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Kişisel Verilerin Korunması</h2>\n<p>6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında veri sorumlusu, gerçek bir işletme olması hâlinde bu sayfada belirtilir. Bu demo sitede gerçek bir veri sorumlusu bulunmamaktadır; formlara girdiğiniz bilgiler kaydedilmez ve iletilmez.</p>\n<p>Gerçek bir sitede bu sayfada işlenen veri türleri, işleme amaçları, aktarım ve saklama süreleri ile başvuru yolları yer alır.</p>\n<p><em>Bu metin demo amaçlı örnektir; hukuki danışmanlık yerine geçmez.</em></p>",
     "en": "<h2>Protection of Personal Data</h2>\n<p>Under Law No. 6698 on the Protection of Personal Data, a real business would name its data controller on this page. This demo site has no real data controller; what you type into forms is neither stored nor transmitted.</p>\n<p>On a live site this page lists the types of data processed, the purposes, transfers, retention periods and how to apply.</p>\n<p><em>This text is a sample for demonstration purposes and is not legal advice.</em></p>",
-    "ar": "<h2>حماية البيانات الشخصية</h2>\n<p>بموجب القانون التركي رقم 6698 لحماية البيانات الشخصية، تُذكر في هذه الصفحة جهة التحكم بالبيانات إذا كان الموقع لنشاط تجاري حقيقي. لا توجد في هذا الموقع التجريبي جهة تحكم حقيقية، ولا تُحفظ المعلومات التي تدخلها في النماذج ولا تُرسَل.</p>\n<p>في الموقع الفعلي تتضمن هذه الصفحة أنواع البيانات المعالَجة وأغراض المعالجة والنقل ومدد الحفظ وسبل التقدم بالطلبات.</p>\n<p><em>هذا النص مثال لأغراض العرض التجريبي ولا يُعدّ استشارة قانونية.</em></p>"
+    "ar": "<h2>حماية البيانات الشخصية</h2>\n<p>بموجب القانون التركي رقم 6698 لحماية البيانات الشخصية، تُذكر في هذه الصفحة جهة التحكم بالبيانات إذا كان الموقع لنشاط تجاري حقيقي. لا توجد في هذا الموقع التجريبي جهة تحكم حقيقية، ولا تُحفظ المعلومات التي تدخلها في النماذج ولا تُرسَل.</p>\n<p>في الموقع الفعلي تتضمن هذه الصفحة أنواع البيانات المعالَجة وأغراض المعالجة والنقل ومدد الحفظ وسبل التقدم بالطلبات.</p>\n<p><em>هذا النص مثال لأغراض العرض التجريبي ولا يُعدّ استشارة قانونية.</em></p>",
+    "de": "<h2>Schutz personenbezogener Daten</h2>\n<p>Im Rahmen des Gesetzes Nr. 6698 über den Schutz personenbezogener Daten wird der Verantwortliche für die Datenverarbeitung, sofern es sich um ein reales Unternehmen handelt, auf dieser Seite angegeben. Auf dieser Demo-Seite gibt es keinen echten Verantwortlichen; in Formularen eingegebene Informationen werden weder gespeichert noch übertragen.</p>\n<p>Auf einer Live-Seite werden hier die verarbeiteten Datentypen, die Verarbeitungszwecke, Übertragungen und Aufbewahrungsfristen sowie die Wege zur Antragstellung aufgeführt.</p>\n<p><em>Dieser Text ist ein Beispiel zu Demonstrationszwecken und ersetzt keine Rechtsberatung.</em></p>",
+    "ru": "<h2>Защита персональных данных</h2>\n<p>В соответствии с Законом № 6698 о защите персональных данных, если речь идет о реальном предприятии, ответственный за обработку данных указывается на этой странице. На этом демо-сайте реального ответственного лица нет; информация, вводимая в формы, не сохраняется и не передается.</p>\n<p>На рабочем сайте на этой странице перечисляются типы обрабатываемых данных, цели обработки, передача и сроки хранения, а также способы подачи заявок.</p>\n<p><em>Этот текст является примером для демонстрации и не заменяет юридическую консультацию.</em></p>"
   },
   "title": {
     "tr": "Kişisel Veriler",
     "en": "Personal Data",
-    "ar": "البيانات الشخصية"
+    "ar": "البيانات الشخصية",
+    "de": "Personenbezogene Daten",
+    "ru": "Персональные данные"
   },
   "date": "2026-11-16T22:46:14.202Z",
   "update": "2026-11-16T22:46:14.771Z",

@@ -3,17 +3,23 @@
   "name": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "description": {
     "tr": "Misyonumuz",
     "en": "Our mission",
-    "ar": "مهمتنا"
+    "ar": "مهمتنا",
+    "de": "Unsere Mission",
+    "ru": "Наша миссия"
   },
   "keyword": {
     "tr": "Misyon",
     "en": "mission, our mission, corporate responsibility",
-    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية"
+    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "path": "misyon",
   "icon": "flag",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Misyonumuz</h2>\n<p>Konya’daki şantiyelere kaba ve ince iş malzemesini en yakın depodan, söz verilen saatte teslim etmek.</p>",
     "en": "<h2>Our mission</h2>\n<p>To deliver structural and finishing materials to Konya’s building sites from the nearest depot at the promised time.</p>",
-    "ar": "<h2>مهمتنا</h2>\n<p>توصيل مواد البناء الهيكلية والتشطيب إلى مواقع البناء في قونية من أقرب مستودع وفي الموعد المحدد.</p>"
+    "ar": "<h2>مهمتنا</h2>\n<p>توصيل مواد البناء الهيكلية والتشطيب إلى مواقع البناء في قونية من أقرب مستودع وفي الموعد المحدد.</p>",
+    "de": "<h2>Unsere Mission</h2>\n<p>Rohbau- und Ausbaumaterial vom nächstgelegenen Lager zur versprochenen Stunde auf die Baustellen in Konya zu liefern.</p>",
+    "ru": "<h2>Наша миссия</h2>\n<p>Доставлять черновые и отделочные материалы на стройки Коньи с ближайшего склада в обещанное время.</p>"
   },
   "title": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "date": "2026-11-16T22:46:14.202Z",
   "update": "2026-11-16T22:46:14.696Z",

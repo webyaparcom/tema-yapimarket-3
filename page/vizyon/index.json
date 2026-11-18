@@ -3,17 +3,23 @@
   "name": {
     "tr": "Vizyon",
     "en": "Vision",
-    "ar": "الرؤية"
+    "ar": "الرؤية",
+    "de": "Vision",
+    "ru": "Видение"
   },
   "description": {
     "tr": "Vizyonumuz",
     "en": "Our vision",
-    "ar": "رؤيتنا"
+    "ar": "رؤيتنا",
+    "de": "Unsere Vision",
+    "ru": "Наше видение"
   },
   "keyword": {
     "tr": "Vizyon",
     "en": "vision, our vision, goals",
-    "ar": "الرؤية, رؤيتنا, الأهداف"
+    "ar": "الرؤية, رؤيتنا, الأهداف",
+    "de": "Vision",
+    "ru": "Видение"
   },
   "path": "vizyon",
   "icon": "visibility",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Vizyonumuz</h2>\n<p>Her ilçede yarım saatlik teslim mesafesinde bir depo olmak.</p>",
     "en": "<h2>Our vision</h2>\n<p>To have a depot within half an hour’s delivery of every district.</p>",
-    "ar": "<h2>رؤيتنا</h2>\n<p>أن يكون لدينا مستودع على بعد نصف ساعة توصيل من كل منطقة.</p>"
+    "ar": "<h2>رؤيتنا</h2>\n<p>أن يكون لدينا مستودع على بعد نصف ساعة توصيل من كل منطقة.</p>",
+    "de": "<h2>Unsere Vision</h2>\n<p>In jedem Bezirk ein Lager in einer halben Stunde Lieferentfernung zu sein.</p>",
+    "ru": "<h2>Наше видение</h2>\n<p>Быть складом в получасе доставки в каждом районе.</p>"
   },
   "title": {
     "tr": "Vizyon",
     "en": "Vision",
-    "ar": "الرؤية"
+    "ar": "الرؤية",
+    "de": "Vision",
+    "ru": "Видение"
   },
   "date": "2026-11-16T22:46:14.202Z",
   "update": "2026-11-16T22:46:14.716Z",

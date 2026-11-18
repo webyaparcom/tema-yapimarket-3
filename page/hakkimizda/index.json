@@ -2,7 +2,9 @@
   "name": {
     "tr": "Şubeler",
     "en": "Branches",
-    "ar": "الفروع"
+    "ar": "الفروع",
+    "de": "Filialen",
+    "ru": "Филиалы"
   },
   "status": "play",
   "category": "",
@@ -24,7 +26,9 @@
   "description": {
     "tr": "Karatay, Selçuklu ve Meram depoları, harita ve rakamlar.",
     "en": "Karatay, Selcuklu and Meram depots, map and figures.",
-    "ar": "مستودعات قراطاي وسلجوقلو ومرام والخريطة والأرقام."
+    "ar": "مستودعات قراطاي وسلجوقلو ومرام والخريطة والأرقام.",
+    "de": "Lager in Karatay, Selçuklu und Meram, Karte und Zahlen.",
+    "ru": "Склады в Каратае, Сельджулу и Мераме, карта и цифры."
   },
   "spot": {
     "tr": "",
@@ -35,12 +39,16 @@
   "title": {
     "tr": "Şubeler",
     "en": "Branches",
-    "ar": "الفروع"
+    "ar": "الفروع",
+    "de": "Filialen",
+    "ru": "Филиалы"
   },
   "keyword": {
     "tr": "hakkımızda",
     "en": "about",
-    "ar": "من نحن"
+    "ar": "من نحن",
+    "de": "Über uns",
+    "ru": "О нас"
   },
   "text": {},
   "update": "2026-11-16T22:46:14.640Z",
