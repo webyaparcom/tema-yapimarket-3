@@ -5,12 +5,16 @@
       "name": {
         "tr": "Paketler",
         "en": "Packages",
-        "ar": "الباقات"
+        "ar": "الباقات",
+        "de": "Pakete",
+        "ru": "Пакеты"
       },
       "description": {
         "tr": "Teslim, vinç, kesim ve metraj hizmetlerinden paket kurun.",
         "en": "Build a package from delivery, crane, cutting and take-off services.",
-        "ar": "كوّن باقة من خدمات التوصيل والرافعة والقص وحساب الكميات."
+        "ar": "كوّن باقة من خدمات التوصيل والرافعة والقص وحساب الكميات.",
+        "de": "Stellen Sie ein Paket aus Lieferung, Kran, Zuschnitt und Aufmaß zusammen.",
+        "ru": "Соберите пакет из услуг доставки, крана, резки и обмера."
       },
       "path": "hizmetler",
       "icon": "checklist",
@@ -30,7 +34,9 @@
       "name": {
         "tr": "Şubeler",
         "en": "Branches",
-        "ar": "الفروع"
+        "ar": "الفروع",
+        "de": "Filialen",
+        "ru": "Филиалы"
       },
       "status": "play",
       "id": "hakkimizda",
@@ -52,14 +58,18 @@
       "description": {
         "tr": "Karatay, Selçuklu ve Meram depoları, harita ve rakamlar.",
         "en": "Karatay, Selcuklu and Meram depots, map and figures.",
-        "ar": "مستودعات قراطاي وسلجوقلو ومرام والخريطة والأرقام."
+        "ar": "مستودعات قراطاي وسلجوقلو ومرام والخريطة والأرقام.",
+        "de": "Lager in Karatay, Selçuklu und Meram, Karte und Zahlen.",
+        "ru": "Склады в Каратае, Сельджулу и Мераме, карта и цифры."
       }
     },
     {
       "name": {
         "tr": "İletişim",
         "en": "Contact",
-        "ar": "اتصل بنا"
+        "ar": "اتصل بنا",
+        "de": "Kontakt",
+        "ru": "Контакты"
       },
       "status": "play",
       "id": "iletisim",
@@ -80,7 +90,9 @@
       "description": {
         "tr": "Proje formu, şube adresleri ve harita.",
         "en": "Project brief, branch addresses and map.",
-        "ar": "نموذج المشروع وعناوين الفروع والخريطة."
+        "ar": "نموذج المشروع وعناوين الفروع والخريطة.",
+        "de": "Projektformular, Filialadressen und Karte.",
+        "ru": "Форма проекта, адреса филиалов и карта."
       }
     }
   ],

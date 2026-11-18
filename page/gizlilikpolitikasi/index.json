@@ -3,17 +3,23 @@
   "name": {
     "tr": "Gizlilik Politikası",
     "en": "Privacy Policy",
-    "ar": "سياسة الخصوصية"
+    "ar": "سياسة الخصوصية",
+    "de": "Datenschutzerklärung",
+    "ru": "Политика конфиденциальности"
   },
   "description": {
     "tr": "Gizlilik politikası",
     "en": "Privacy policy",
-    "ar": "سياسة الخصوصية"
+    "ar": "سياسة الخصوصية",
+    "de": "Datenschutzerklärung",
+    "ru": "Политика конфиденциальности"
   },
   "keyword": {
     "tr": "Gizlilik Politikası",
     "en": "privacy policy, personal data, data protection",
-    "ar": "سياسة الخصوصية, البيانات الشخصية, حماية البيانات"
+    "ar": "سياسة الخصوصية, البيانات الشخصية, حماية البيانات",
+    "de": "Datenschutzerklärung",
+    "ru": "Политика конфиденциальности"
   },
   "path": "gizlilikpolitikasi",
   "icon": "privacy_tip",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Gizlilik Politikası</h2>\n<p>Üçyol Yapı demo sitesi, ziyaretçilerinden yalnızca sitenin çalışması için gerekli teknik verileri işler. Bu demo sitede sipariş, ödeme veya üyelik verisi sunucuya gönderilmez; sepet ve form bilgileri yalnızca tarayıcınızda tutulur.</p>\n<p>Analitik ve pazarlama çerezleri varsayılan olarak kapalıdır; tercihlerinizi çerez bandından istediğiniz zaman değiştirebilirsiniz. Üçüncü taraflarla veri paylaşılmaz.</p>\n<p><em>Bu metin demo amaçlı örnektir; hukuki danışmanlık yerine geçmez.</em></p>",
     "en": "<h2>Privacy Policy</h2>\n<p>Üçyol Yapı demo site processes only the technical data required for the site to work. No order, payment or membership data is sent to a server; cart and form details stay in your browser.</p>\n<p>Analytics and marketing cookies are off by default; you can change your choices from the cookie banner at any time. No data is shared with third parties.</p>\n<p><em>This text is a sample for demonstration purposes and is not legal advice.</em></p>",
-    "ar": "<h2>سياسة الخصوصية</h2>\n<p>يعالج الموقع التجريبي «Üçyol Yapı» البيانات التقنية اللازمة لتشغيله فقط. لا تُرسَل بيانات الطلبات أو الدفع أو العضوية إلى أي خادم، وتبقى معلومات السلة والنماذج في متصفحك.</p>\n<p>ملفات تعريف الارتباط التحليلية والتسويقية معطّلة افتراضيًا، ويمكنك تغيير اختياراتك من شريط ملفات تعريف الارتباط في أي وقت. لا تتم مشاركة أي بيانات مع أطراف ثالثة.</p>\n<p><em>هذا النص مثال لأغراض العرض التجريبي ولا يُعدّ استشارة قانونية.</em></p>"
+    "ar": "<h2>سياسة الخصوصية</h2>\n<p>يعالج الموقع التجريبي «Üçyol Yapı» البيانات التقنية اللازمة لتشغيله فقط. لا تُرسَل بيانات الطلبات أو الدفع أو العضوية إلى أي خادم، وتبقى معلومات السلة والنماذج في متصفحك.</p>\n<p>ملفات تعريف الارتباط التحليلية والتسويقية معطّلة افتراضيًا، ويمكنك تغيير اختياراتك من شريط ملفات تعريف الارتباط في أي وقت. لا تتم مشاركة أي بيانات مع أطراف ثالثة.</p>\n<p><em>هذا النص مثال لأغراض العرض التجريبي ولا يُعدّ استشارة قانونية.</em></p>",
+    "de": "<h2>Datenschutzerklärung</h2>\n<p>Die Demo-Website von Üçyol Yapı verarbeitet nur die technischen Daten, die für den Betrieb der Seite erforderlich sind. Auf dieser Demo-Website werden keine Bestell-, Zahlungs- oder Mitgliedsdaten an einen Server gesendet; Warenkorb- und Formulardaten werden ausschließlich in Ihrem Browser gespeichert.</p>\n<p>Analytics- und Marketing-Cookies sind standardmäßig deaktiviert; Sie können Ihre Einstellungen jederzeit über die Cookie-Leiste ändern. Es werden keine Daten mit Dritten geteilt.</p>\n<p><em>Dieser Text ist ein Beispiel zu Demonstrationszwecken und ersetzt keine Rechtsberatung.</em></p>",
+    "ru": "<h2>Политика конфиденциальности</h2>\n<p>Демо-сайт Üçyol Yapı обрабатывает только технические данные, необходимые для работы сайта. На этом демо-сайте данные заказов, платежей или регистрации не отправляются на сервер; данные корзины и форм хранятся только в вашем браузере.</p>\n<p>Куки для аналитики и маркетинга отключены по умолчанию; вы можете изменить свои настройки в любое время через баннер куки. Данные не передаются третьим лицам.</p>\n<p><em>Этот текст является примером для демонстрации и не является юридической консультацией.</em></p>"
   },
   "title": {
     "tr": "Gizlilik Politikası",
     "en": "Privacy Policy",
-    "ar": "سياسة الخصوصية"
+    "ar": "سياسة الخصوصية",
+    "de": "Datenschutzerklärung",
+    "ru": "Политика конфиденциальности"
   },
   "date": "2026-11-16T22:46:14.202Z",
   "update": "2026-11-16T22:46:14.747Z",

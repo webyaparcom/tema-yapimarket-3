@@ -3,17 +3,23 @@
   "name": {
     "tr": "Yasal Uyarı",
     "en": "Legal Notice",
-    "ar": "إشعار قانوني"
+    "ar": "إشعار قانوني",
+    "de": "Rechtlicher Hinweis",
+    "ru": "Правовая информация"
   },
   "description": {
     "tr": "Yasal uyarı",
     "en": "Legal notice",
-    "ar": "إشعار قانوني"
+    "ar": "إشعار قانوني",
+    "de": "Rechtlicher Hinweis",
+    "ru": "Правовое уведомление"
   },
   "keyword": {
     "tr": "Yasal Uyarı",
     "en": "legal notice, disclaimer, intellectual property",
-    "ar": "إشعار قانوني, إخلاء المسؤولية, الملكية الفكرية"
+    "ar": "إشعار قانوني, إخلاء المسؤولية, الملكية الفكرية",
+    "de": "Rechtlicher Hinweis",
+    "ru": "Правовая информация"
   },
   "path": "yasaluyari",
   "icon": "policy",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Yasal Uyarı</h2>\n<p>Bu site, Webyapar tema setinin bir demosudur. Adlar, adresler, fiyatlar, belge numaraları ve görseller kurgusaldır; görseller yapay zekâ ile üretilmiştir ve gerçek kişi, ürün ya da mekânı temsil etmez.</p>\n<p>Sitede gerçek bir satış, rezervasyon veya hizmet sunulmaz. Bu temayı kendi işletmeniz için istemek üzere sayfa üstündeki bağlantıyı kullanabilirsiniz.</p>\n<p><em>Bu metin demo amaçlı örnektir; hukuki danışmanlık yerine geçmez.</em></p>",
     "en": "<h2>Legal Notice</h2>\n<p>This site is a demo of the Webyapar theme set. Names, addresses, prices, document numbers and images are fictional; the images are AI-generated and do not depict real people, products or places.</p>\n<p>No real sale, reservation or service is offered on this site. To request this theme for your own business, use the link at the top of the page.</p>\n<p><em>This text is a sample for demonstration purposes and is not legal advice.</em></p>",
-    "ar": "<h2>إشعار قانوني</h2>\n<p>هذا الموقع عرض تجريبي لمجموعة قوالب Webyapar. الأسماء والعناوين والأسعار وأرقام الوثائق والصور كلها افتراضية؛ والصور مُنشأة بالذكاء الاصطناعي ولا تمثل أشخاصًا أو منتجات أو أماكن حقيقية.</p>\n<p>لا يُقدَّم في هذا الموقع أي بيع أو حجز أو خدمة فعلية. لطلب هذا القالب لنشاطك التجاري استخدم الرابط الموجود أعلى الصفحة.</p>\n<p><em>هذا النص مثال لأغراض العرض التجريبي ولا يُعدّ استشارة قانونية.</em></p>"
+    "ar": "<h2>إشعار قانوني</h2>\n<p>هذا الموقع عرض تجريبي لمجموعة قوالب Webyapar. الأسماء والعناوين والأسعار وأرقام الوثائق والصور كلها افتراضية؛ والصور مُنشأة بالذكاء الاصطناعي ولا تمثل أشخاصًا أو منتجات أو أماكن حقيقية.</p>\n<p>لا يُقدَّم في هذا الموقع أي بيع أو حجز أو خدمة فعلية. لطلب هذا القالب لنشاطك التجاري استخدم الرابط الموجود أعلى الصفحة.</p>\n<p><em>هذا النص مثال لأغراض العرض التجريبي ولا يُعدّ استشارة قانونية.</em></p>",
+    "de": "<h2>Rechtlicher Hinweis</h2>\n<p>Diese Website ist eine Demo des Webyapar-Themenpakets. Namen, Adressen, Preise, Dokumentnummern und Bilder sind fiktiv; die Bilder wurden mit künstlicher Intelligenz erstellt und stellen keine realen Personen, Produkte oder Orte dar.</p>\n<p>Auf der Website werden keine echten Verkäufe, Reservierungen oder Dienstleistungen angeboten. Wenn Sie dieses Theme für Ihr eigenes Unternehmen möchten, nutzen Sie den Link oben auf der Seite.</p>\n<p><em>Dieser Text ist ein Beispiel zu Demozwecken und ersetzt keine Rechtsberatung.</em></p>",
+    "ru": "<h2>Правовое уведомление</h2>\n<p>Этот сайт — демонстрация набора тем Webyapar. Имена, адреса, цены, номера документов и изображения вымышлены; изображения созданы с помощью искусственного интеллекта и не изображают реальных людей, товары или места.</p>\n<p>На сайте не осуществляются реальные продажи, бронирования или услуги. Чтобы заказать эту тему для своего бизнеса, воспользуйтесь ссылкой вверху страницы.</p>\n<p><em>Этот текст является демонстрационным примером и не заменяет юридическую консультацию.</em></p>"
   },
   "title": {
     "tr": "Yasal Uyarı",
     "en": "Legal Notice",
-    "ar": "إشعار قانوني"
+    "ar": "إشعار قانوني",
+    "de": "Rechtlicher Hinweis",
+    "ru": "Правовая информация"
   },
   "date": "2026-11-16T22:46:14.202Z",
   "update": "2026-11-16T22:46:14.829Z",

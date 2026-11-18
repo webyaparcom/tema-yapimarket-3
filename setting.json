@@ -4,12 +4,16 @@
   "description": {
     "tr": "Üçyol Yapı Depoları: Konya’da üç şubeden çimento, demir, tuğla, yalıtım ve ince iş malzemesi; vinçli indirme ve şantiyeye teslim. Size en yakın depoyu bulun. Demo site; içerik kurgusaldır.",
     "en": "Ucyol Building Depots: cement, rebar, bricks, insulation and finishing materials from three branches in Konya, with crane unloading and site delivery. Find your nearest depot. Demo site; content is fictional.",
-    "ar": "أوتشيول لمستودعات البناء: إسمنت وحديد وطوب وعزل ومواد تشطيب من ثلاثة فروع في قونية، مع التفريغ بالرافعة والتوصيل إلى الموقع. اعثر على أقرب مستودع. موقع تجريبي؛ المحتوى افتراضي."
+    "ar": "أوتشيول لمستودعات البناء: إسمنت وحديد وطوب وعزل ومواد تشطيب من ثلاثة فروع في قونية، مع التفريغ بالرافعة والتوصيل إلى الموقع. اعثر على أقرب مستودع. موقع تجريبي؛ المحتوى افتراضي.",
+    "de": "Üçyol Yapı Depoları: Zement, Eisen, Ziegel, Dämmung und Ausbaumaterial aus drei Filialen in Konya; Abladen per Kran und Lieferung zur Baustelle. Finden Sie das nächste Lager. Demo-Website; der Inhalt ist fiktiv.",
+    "ru": "Üçyol Yapı Depoları: цемент, арматура, кирпич, утеплитель и отделочные материалы из трёх филиалов в Конье; разгрузка краном и доставка на стройплощадку. Найдите ближайший склад. Демо-сайт; содержание вымышленное."
   },
   "keyword": {
     "tr": "yapı deposu, çimento, inşaat demiri, tuğla, şantiye teslimi, Konya",
     "en": "building depot, cement, rebar, bricks, site delivery, Konya",
-    "ar": "مستودع مواد بناء، إسمنت، حديد تسليح، طوب، توصيل للموقع، قونية"
+    "ar": "مستودع مواد بناء، إسمنت، حديد تسليح، طوب، توصيل للموقع، قونية",
+    "de": "Bauhof, Zement, Bewehrungsstahl, Ziegel, Baustellenlieferung, Konya",
+    "ru": "Стройбаза, цемент, арматура, кирпич, доставка на объект, Конья"
   },
   "category": "Kurumsal",
   "name": "Üçyol Yapı",
@@ -18,15 +22,27 @@
     "tr": true,
     "en": true,
     "ar": true,
-    "de": false,
-    "ru": false,
+    "de": true,
+    "ru": true,
     "es": false,
     "fr": false,
     "it": false,
     "ja": false,
     "zh": false,
     "ko": false,
-    "pt": false
+    "pt": false,
+    "fa": false,
+    "he": false,
+    "ur": false,
+    "nl": false,
+    "pl": false,
+    "uk": false,
+    "az": false,
+    "ka": false,
+    "el": false,
+    "bg": false,
+    "ro": false,
+    "hi": false
   },
   "logo": "logo.png",
   "multi": false,

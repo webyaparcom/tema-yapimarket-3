@@ -7,7 +7,9 @@
       "name": {
         "tr": "Malzeme",
         "en": "Material",
-        "ar": "المادة"
+        "ar": "المادة",
+        "de": "Materialien",
+        "ru": "Материалы"
       }
     }
   ],
